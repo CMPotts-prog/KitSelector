@@ -1,0 +1,44 @@
+## sunny weather kit
+awk = ['sunglasses', 'hat', 'hiking boots']
+
+##hot weather kit = hwk
+hwk = ['threeqtr hikers', 'rash guard', 'hiking boots']
+
+##dodgy weather kit
+dwk = ['full length hikers', 'rash guard', 'spray top', 'neoprene socks', 'hiking boots']
+
+##cold weather kit
+cwk = ['drysuit', 'baselayers', 'wool knee socks' ]
+
+## dinghy sailing wardrobe
+
+##So this is where you defined the loop and I definitely wouldn’t have gotten here on my own but I think I can make it work in a6. I guess we’ll see. 
+
+a = 'y'
+
+
+#dsw = allconditions + hwk + dwk + cwk
+print ('Welcome to the Sailing Kit program; we will help you identify the right kit to keep you safe, warm and competitive on the water!')
+
+x = str(input ('What is your name?:'))
+
+print ('Hello,', (x),'!!! Let\'s get you suited up to have a great day on the water!')
+
+while a == 'y' or a == 'Y':
+    start = int(input('What is the temperature (in F?): '))
+    if start<75:
+        print (start, '!!!')
+        print(' You need to wear clothes for cold weather!:', awk + cwk)
+
+    if start==75:
+        print(start,'!!! This is the midAtlantic! Wear clothes for unreliable weather!: ', awk + dwk)
+
+    else:
+        print (start,'!!! Wear clothes for hot weather!:', awk + hwk)
+
+##and this is where you recycle or closed the loop.  If a == anything not “y” then it will close the loop and pop the user out of the program. 
+
+    a = input('Has the weather already changed again? Y/N: ')
+
+print ('That\'ll change! but until then have fun and sail fast!')
+
